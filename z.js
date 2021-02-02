@@ -1,9 +1,9 @@
 // debug
 import { zDebug } from "./debug/debug.js";
-let zDebug = new zDebug();
+let zLog = new zDebug();
 //export { zDebug };
 
 // basic_components
 export { zTable } from "./basic_components/table.js";
 
-zDebug.addLog("z-js loaded");
+zLog.addLog("z-js loaded");
