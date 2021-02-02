@@ -32,7 +32,7 @@ let zTable = new (class zTable {
     // array to table
     array2table(arr, config = { "row": false, "col": false }) {
         // config：1行目・1列目をthにするか？
-        
+        console.log(config.row);
         let tbl = document.createElement("table");
         let tbody = document.createElement("tbody");
         tbl.appendChild(tbody);
@@ -42,7 +42,8 @@ let zTable = new (class zTable {
                 tr.appendChild(
                     this.setCell(arr[i][j],
                         (i == 0 && config.row) || (j == 0 && config.col)
-                    ));
+                    )
+                );
             }
             tbody.appendChild(tr);
         }
