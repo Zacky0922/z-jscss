@@ -8,3 +8,4 @@ export { zTable } from "./basic_components/table.js";
 export { zArray } from "./basic_variable/array.js";
 
 zDebug.addLog("z-js loaded");
+console.log("z.js loaded.")

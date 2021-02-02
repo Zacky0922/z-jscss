@@ -37,7 +37,7 @@ let zTable = new (class zTable {
         tbl.appendChild(tbody);
         for (let i = 0; i < arr.length; i++) {
             let tr = document.createElement("tr");
-            for (let j = 0; arr[i].length; j++) {
+            for (let j = 0; j < arr[i].length; j++) {
                 tr.appendChild(
                     this.setCell(arr[i][j],
                         (i == 0 && row) || (j == 0 && col)
