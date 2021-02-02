@@ -1,5 +1,5 @@
 // table処理クラス
-export class zTable {
+class zTable {
 
     // 簡易セル生成
     setCell(tx, th = false) {
@@ -29,3 +29,5 @@ export class zTable {
         return tbl;
     }
 }
+
+export { zTable };

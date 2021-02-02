@@ -1,4 +1,4 @@
-export class zDebug{
+class zDebug{
     constructor() {
         this.log = ["Log by zDebug"];
     }
@@ -7,3 +7,5 @@ export class zDebug{
         this.log[this.log.length] = e;
     }
 }
+
+export { zDebug };
