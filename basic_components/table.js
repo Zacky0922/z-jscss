@@ -10,6 +10,7 @@ let zTable = new (class zTable {
     
     // json to table
     json2table(json) {
+        console.log("json2table");
         let tbl = document.createElement("table");
         let thead = document.createElement("thead");
         tbl.appendChild(thead);
