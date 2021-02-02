@@ -1,4 +1,4 @@
-class zDebug{
+let zDebug = new (class zDebug{
     constructor() {
         this.log = ["Log by zDebug"];
     }
@@ -6,6 +6,6 @@ class zDebug{
     addLog(e) {
         this.log[this.log.length] = e;
     }
-}
+}) ();
 
 export { zDebug };

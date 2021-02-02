@@ -1,5 +1,5 @@
 // table処理クラス
-class zTable {
+let zTable = new (class zTable {
 
     // 簡易セル生成
     setCell(tx, th = false) {
@@ -28,6 +28,6 @@ class zTable {
         }
         return tbl;
     }
-}
+}) ();
 
 export { zTable };
