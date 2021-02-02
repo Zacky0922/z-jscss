@@ -16,14 +16,14 @@ let zTable = new (class zTable {
         tbl.appendChild(thead);
         let tr = document.createElement("tr");
         for (let j in json[0]) {
-            tr.appendChild(setCell(j, true));
+            tr.appendChild(this.setCell(j, true));
         }
         let tbody = document.createElement("tbody");
         tbl.appendChild(tbody);
         for (let i = 0; i < json.length; i++) {
             let tr = document.createElement("tr");
             for (let j in json[0]) {
-                tr.appendChild(setCell(json[i][j]));
+                tr.appendChild(this.setCell(json[i][j]));
             }
             tbody.appendChild(tr);
         }
