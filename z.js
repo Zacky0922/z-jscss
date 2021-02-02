@@ -4,5 +4,7 @@ import { zDebug } from "./debug/debug.js";
 
 // basic_components
 export { zTable } from "./basic_components/table.js";
+// basic_variable
+export { zArray } from "./basic_variable/array.js";
 
 zDebug.addLog("z-js loaded");
