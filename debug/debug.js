@@ -36,9 +36,9 @@ let zDebug = new (class zDebug {
         }
         
         // 新しいQueryを設定 
-        for (let key in query) {
+        for (let key in setQ) {
             q += (q == "?" ? "" : "&") +
-                key + (query[key] == null ? "" : "=" + query[key]);
+                key + (quersetQy[key] == null ? "" : "=" + setQ[key]);
         }
         let url = window.location.href.split("?")[0];
         window.open(url + q, "_self");
