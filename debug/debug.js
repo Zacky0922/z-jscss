@@ -48,6 +48,7 @@ let zDebug = new (class zDebug {
         window.open(url + q, "_self");
     }
 
+    //　動作調整中
     // キーがあるか？
     hasUrlQuery(key) {
         if (key in this.getUrlQuery()) {
