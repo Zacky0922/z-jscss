@@ -24,21 +24,29 @@
 </head>
 
 <body>
-    <a class="btn btn-primary" id="setUrlQuery">setUrlQuery</a>
+    <a class="btn btn-primary" id="setUrlQuery0">setUrlQuery<br />
+        debug&test=0&test1=1 , true</a>
+    <a class="btn btn-primary" id="setUrlQuery1">setUrlQuery<br />
+        debug&test=1 , false</a>
     <script>
         import("./z.js").then(z => {
             console.log(z.zDebug.getUrlQuery());
 
-            $("#setUrlQuery").click(function () {
+            $("#setUrlQuery0").click(function () {
                 z.zDebug.setUrlQuery({
                     "debug": null,
                     "test": 0,
                     "test1": 1
-                });
-            })
+                }, true);
+            });
+            $("#setUrlQuery1").click(function () {
+                z.zDebug.setUrlQuery({
+                    "debug": null,
+                    "test": 1
+                }, false);
+            });
         });
     </script>
-
 </body>
 
 </html>

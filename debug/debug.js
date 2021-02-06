@@ -23,10 +23,18 @@ let zDebug = new (class zDebug {
     // nowQuery：古いクエリを参照するか？（新規設定に同じkeyがあった場合は上書きされるけど）
     setUrlQuery(query, nowQuery = false) {
         let q = "?";
-        // 従来のQueryを取得
+        // 従来のQueryを取得/
+        let setQ = {};
         if (nowQuery) {
-            let oldQ = this.getUrlQuery().concat(query);
+            let oldQ = this.getUrlQuery();
+            for (let key in query) {
+                oldQ[key] = query[key];
+            }
+            setQ = oldQ;
+        } else {
+            setQ = query;
         }
+        
         // 新しいQueryを設定 
         for (let key in query) {
             q += (q == "?" ? "" : "&") +
