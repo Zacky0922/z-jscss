@@ -22,8 +22,7 @@ let zDebug = new (class zDebug {
     // URL query設定
     // nowQuery：古いクエリを参照するか？（新規設定に同じkeyがあった場合は上書きされるけど）
     setUrlQuery(query, nowQuery = false) {
-        let q = "?";
-        // 従来のQueryを取得/
+        // 従来のQueryを取得するか？
         let setQ = {};
         if (nowQuery) {
             let oldQ = this.getUrlQuery();
@@ -35,10 +34,11 @@ let zDebug = new (class zDebug {
             setQ = query;
         }
         
-        // 新しいQueryを設定 
+        // 新しいQueryを設定
+        let q = "?";
         for (let key in setQ) {
             q += (q == "?" ? "" : "&") +
-                key + (quersetQy[key] == null ? "" : "=" + setQ[key]);
+                key + (setQ[key] == null ? "" : "=" + setQ[key]);
         }
         let url = window.location.href.split("?")[0];
         window.open(url + q, "_self");
