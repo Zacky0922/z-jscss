@@ -3,6 +3,10 @@ let zDebug = new (class zDebug {
         this.log = ["Log by zDebug"];
     }
 
+
+    // ■ □ ■ □ ■ □ ■ □ ■ □ ■ □ ■ □ ■ □ ■ □ 
+    // ■ □ ■ □ ■ □ URL Query ■ □ ■ □ ■ □ 
+    // ■ □ ■ □ ■ □ ■ □ ■ □ ■ □ ■ □ ■ □ ■ □ 
     // URL query取得（戻り値：String）
     getUrlQuery() {
         let query = window.location.search;
@@ -44,6 +48,16 @@ let zDebug = new (class zDebug {
         window.open(url + q, "_self");
     }
 
+    // キーがあるか？
+    hasUrlQuery(key) {
+        if (key in this.getUrlQuery()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    
     addLog(e) {
         this.log[this.log.length] = e;
     }
