@@ -1,0 +1,9 @@
+.z-construction {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5) 10px,
+    rgba(255, 255, 0, 0.5) 10px,
+    rgba(255, 255, 0, 0.5) 20px
+  );
+}
