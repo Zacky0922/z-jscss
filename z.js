@@ -7,6 +7,8 @@ export { zTable } from "./basic_components/table.js";
 // basic_variable
 export { zArray } from "./basic_variable/array.js";
 
+export { CSVtx2json } from "./document/CSVtx2json";
+
 zDebug.addLog("z-js loaded");
 console.log("z.js loaded.")
 export { zDebug };
