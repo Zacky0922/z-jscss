@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <!--HTML5-->
 <html lang="ja">
-
-<head>
+  <head>
     <!-- meta設定 -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-    <meta http-equiv="Content-Script-Type" content="text/javascript" charset="UTF-8" />
+    <meta
+      http-equiv="Content-Script-Type"
+      content="text/javascript"
+      charset="UTF-8"
+    />
     <meta http-equiv="Content-Style-Type" content="text/ccs" charset="UTF-8" />
     <meta name="robots" content="noindex,nofollow" />
 
@@ -15,44 +18,70 @@
     <!-- jQuery依存 -->
 
     <!-- Bootstrap 5.0.0 alpha -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- myCSS -->
-    <link href="./z.css" rel="stylesheet">
+    <link href="./z.css" rel="stylesheet" />
     <title>test</title>
-</head>
+  </head>
 
-<body>
-    <a class="btn btn-primary" id="setUrlQuery0">setUrlQuery<br />
-        debug&test=0&test1=1 , true</a>
-    <a class="btn btn-primary" id="setUrlQuery1">setUrlQuery<br />
-        debug&test=1 , false</a>
+  <body>
+    <a class="btn btn-primary" id="setUrlQuery0"
+      >setUrlQuery<br />
+      debug&test=0&test1=1 , true</a
+    >
+    <a class="btn btn-primary" id="setUrlQuery1"
+      >setUrlQuery<br />
+      debug&test=1 , false</a
+    >
     <script>
-        import("./z.js").then(z => {
-            console.log(z.zDebug.getUrlQuery());
+      import("./z.js").then((z) => {
+        console.log(z.zDebug.getUrlQuery());
 
-            $("#setUrlQuery0").click(function () {
-                z.zDebug.setUrlQuery({
-                    "debug": null,
-                    "test": 0,
-                    "test1": 1
-                }, true);
-            });
-            $("#setUrlQuery1").click(function () {
-                z.zDebug.setUrlQuery({
-                    "debug": null,
-                    "test": 1
-                }, false);
-            });
-            
-            console.log(z.zDebug.hasUrlQuery("debug"));
+        $("#setUrlQuery0").click(function () {
+          z.zDebug.setUrlQuery(
+            {
+              debug: null,
+              test: 0,
+              test1: 1,
+            },
+            true
+          );
         });
-    </script>
-    <div class="z-holo">テスト<br />テスト<br />テスト<br />テスト<br /></div>
-</body>
+        $("#setUrlQuery1").click(function () {
+          z.zDebug.setUrlQuery(
+            {
+              debug: null,
+              test: 1,
+            },
+            false
+          );
+        });
 
+        console.log(z.zDebug.hasUrlQuery("debug"));
+      });
+    </script>
+    <h2>background</h2>
+    <div class="z-holo"><br /><br /></div>
+    <div class="z-holo z-holo-gold"><br /><br /></div>
+    <div class="z-holo z-holo-silver"><br /><br /></div>
+    <div class="z-holo z-holo-bronze"><br /><br /></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        import("./background/floatingFigure.js").then((module) => {
+          module.floatingFigure();
+        });
+      });
+    </script>
+  </body>
 </html>

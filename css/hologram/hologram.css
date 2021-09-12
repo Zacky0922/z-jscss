@@ -28,7 +28,7 @@
 /* 各色設定 */
 .z-holo.z-holo-gold {
   background: var(--z-holo-mask), -webkit-linear-gradient(-45deg, #ff8, #dd0),
-    linear-gradient(-45deg, #ff8, #dd0);
+    linear-gradient(-45deg, #ff8, #dc0);
 }
 
 .z-holo.z-holo-silver {
