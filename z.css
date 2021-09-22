@@ -1,6 +1,6 @@
 
 @import "./background/construction.css";
-@import "./css/hologram/hologram.css";
+@import "./css/hologram/hologram.min.css";
 
 /* 特殊インポート参考
 https://developer.mozilla.org/ja/docs/Web/CSS/@import */
